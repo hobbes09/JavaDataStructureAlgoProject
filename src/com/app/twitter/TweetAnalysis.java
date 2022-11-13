@@ -1,6 +1,5 @@
 package com.app.twitter;
 
-import com.app.BinaryHeap;
 import com.app.Solution;
 import java.util.*;
 

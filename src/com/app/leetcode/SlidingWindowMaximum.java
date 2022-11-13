@@ -1,4 +1,6 @@
-package com.app;
+package com.app.leetcode;
+
+import com.app.Solution;
 
 import java.util.Arrays;
 import java.util.Deque;
