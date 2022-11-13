@@ -1,10 +1,10 @@
-package com.app.project_fk.service;
+package com.app.design.booking.service;
 
-import com.app.project_fk.InvalidSeatException;
-import com.app.project_fk.models.Seat;
-import com.app.project_fk.models.Show;
-import com.app.project_fk.models.User;
-import com.app.project_fk.models.UserBookingSession;
+import com.app.design.booking.InvalidSeatException;
+import com.app.design.booking.models.Seat;
+import com.app.design.booking.models.Show;
+import com.app.design.booking.models.User;
+import com.app.design.booking.models.UserBookingSession;
 
 import java.util.List;
 

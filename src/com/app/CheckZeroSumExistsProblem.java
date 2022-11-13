@@ -1,4 +1,4 @@
-package com.app.glovo;
+package com.app;
 
 import com.app.Solution;
 

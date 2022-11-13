@@ -1,4 +1,4 @@
-package com.app.ex;
+package com.app.design.poker;
 
 import com.app.Solution;
 

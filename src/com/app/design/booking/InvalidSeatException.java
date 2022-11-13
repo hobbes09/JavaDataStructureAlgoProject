@@ -1,4 +1,4 @@
-package com.app.project_fk;
+package com.app.design.booking;
 
 public class InvalidSeatException extends Exception {
 }

@@ -46,7 +46,6 @@ public class HeapDemo implements Solution {
 
         System.out.println("Min Heap Content");
         int i = 0;
-        System.out.println(minHeap.peek().age + "  ======>>>>");
         while (i++ < SIZE) {
             System.out.println(minHeap.poll());
         }

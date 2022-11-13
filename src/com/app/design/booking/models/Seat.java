@@ -1,4 +1,4 @@
-package com.app.project_fk.models;
+package com.app.design.booking.models;
 
 public class Seat {
     int number;

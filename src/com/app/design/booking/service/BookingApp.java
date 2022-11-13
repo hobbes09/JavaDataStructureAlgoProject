@@ -1,8 +1,8 @@
-package com.app.project_fk.service;
+package com.app.design.booking.service;
 
 import com.app.Solution;
-import com.app.project_fk.InvalidSeatException;
-import com.app.project_fk.models.*;
+import com.app.design.booking.InvalidSeatException;
+import com.app.design.booking.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
