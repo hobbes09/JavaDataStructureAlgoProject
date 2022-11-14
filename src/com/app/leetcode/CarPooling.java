@@ -1,4 +1,4 @@
-package com.app.reference;
+package com.app.leetcode;
 
 import com.app.Solution;
 

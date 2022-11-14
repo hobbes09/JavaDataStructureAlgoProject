@@ -1,10 +1,10 @@
-package com.app.leetcode;
+package com.app.reference;
 
 import com.app.Solution;
 
 import java.util.stream.Stream;
 
-public class ExperimentCode implements Solution {
+public class JavaStreamingExamples implements Solution {
 
     static class Employee {
         int id;
