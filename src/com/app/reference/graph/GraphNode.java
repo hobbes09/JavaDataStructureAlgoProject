@@ -1,15 +1,17 @@
-package com.app.reference;
+package com.app.reference.graph;
 
 import java.util.LinkedList;
 
 public class GraphNode {
     int value;
     boolean isVisited;
+    GraphNodeState state;
     LinkedList<GraphNode> adjacencyList;
 
     public GraphNode(int value) {
         this.value = value;
         this.isVisited = false;
+        this.state = GraphNodeState.WHITE;
         this.adjacencyList = new LinkedList<>();
     }
 
