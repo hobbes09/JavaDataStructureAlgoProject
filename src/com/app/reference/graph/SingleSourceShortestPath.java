@@ -100,20 +100,6 @@ public class SingleSourceShortestPath implements Solution {
         }
     }
 
-//    private Node getClosestNodeFromConnectedEdges(Node minDistanceNode) {
-//
-//        ArrayList<EdgeNode> adjNodes = allAdjNodes.get(minDistanceNode);
-//        int min = Integer.MAX_VALUE;
-//        Node closestNode = null;
-//        for(EdgeNode edgeNode: adjNodes) {
-//            if (minDistances.get(edgeNode.node) < min) {
-//                min = minDistances.get(edgeNode.node);
-//                closestNode = edgeNode.node;
-//            }
-//        }
-//        return closestNode;
-//    }
-
     private void relaxEdgesOfNode(Node minDistanceNode) {
 
         ArrayList<EdgeNode> adjNodes = allAdjNodes.get(minDistanceNode);

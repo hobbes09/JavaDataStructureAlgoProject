@@ -13,7 +13,7 @@ public class ReverseLinkedListByKNodes implements Solution {
         }
 
         public boolean hasNext() {
-            return next!=null;
+            return next != null;
         }
 
         public void setNext(ListNode next) {
@@ -21,7 +21,28 @@ public class ReverseLinkedListByKNodes implements Solution {
         }
     }
 
+    // 1>2>3>4>5
+    //
+    ListNode reverseLinkedList(ListNode head) {
 
+        ListNode curr, next, nNext;
+        curr = head;
+        next = curr.next;
+        curr.next = null;
+
+        while (curr != null) {
+            head = curr;
+            nNext = next!=null ? next.next: null;
+
+            if (next == null)
+                break;
+
+            next.next = curr;
+            curr = next;
+            next = nNext;
+        }
+        return head;
+    }
     ListNode reverseNodePositionByKValues(ListNode head, int K) {
 
         if (head == null) {
@@ -90,18 +111,20 @@ public class ReverseLinkedListByKNodes implements Solution {
         ListNode l3 = new ListNode(3);
         ListNode l4 = new ListNode(4);
         ListNode l5 = new ListNode(5);
-        head.next = l1;
+        head = l1;
         l1.next=l2;
         l2.next=l3;
         l3.next=l4;
         l4.next=l5;
         l5.next = null;
 
-        reverseNodePositionByKValues(head, K);
+        head = reverseLinkedList(head);
+
+//        reverseNodePositionByKValues(head, K);
         ListNode curr = head;
-        while(curr.hasNext()) {
-            curr = curr.next;
+        while(curr != null) {
             System.out.println(curr.val);
+            curr = curr.next;
         }
 
     }

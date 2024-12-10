@@ -14,21 +14,13 @@ public class Transaction {
     public ArrayList<Borrow> individualBorrows;
     public SplitStrategy splitStrategy;
 
-    public Group group;
-
-    private Transaction() {
+    protected Transaction() {
     }
 
-    private Transaction(Expense expense, ArrayList<Borrow> individualBorrows, SplitStrategy splitStrategy) {
+    protected Transaction(Expense expense, ArrayList<Borrow> individualBorrows, SplitStrategy splitStrategy) {
         this.expense = expense;
         this.individualBorrows = individualBorrows;
         this.splitStrategy = splitStrategy;
-    }
-
-    private Transaction(Expense expense, SplitStrategy splitStrategy, Group group) {
-        this.expense = expense;
-        this.splitStrategy = splitStrategy;
-        this.group = group;
     }
 
     public static Transaction createTransactionFromInput(InputModel input) {

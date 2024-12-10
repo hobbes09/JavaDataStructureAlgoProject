@@ -15,13 +15,13 @@ class TrieNode {
 }
 
 class TrieImplementation {
-    char[][] _board = null;
-    ArrayList<String> _result = new ArrayList<String>();
 
-    public List<String> findWords(char[][] board, String[] words) {
+    TrieNode root;
 
-        // Step 1). Construct the Trie
-        TrieNode root = new TrieNode();
+    public TrieImplementation(String[] words) {
+
+        this.root = new TrieNode();
+
         for (String word : words) {
             TrieNode node = root;
 
@@ -36,9 +36,28 @@ class TrieImplementation {
             }
             node.word = word;  // store words in Trie
         }
+    }
 
-        this._board = board;
+    public TrieNode getRoot() {
+        return root;
+    }
+}
+
+class WordFinder {
+
+    TrieImplementation trieImplementation;
+
+    char[][] _board = null;
+    ArrayList<String> _result = new ArrayList<String>();
+
+    public List<String> findWords(char[][] board, String[] words) {
+
+        // Step 1). Construct the Trie
+        this.trieImplementation = new TrieImplementation(words);
+        TrieNode root = this.trieImplementation.getRoot();
+
         // Step 2). Backtracking starting for each cell in the board
+        this._board = board;
         for (int row = 0; row < board.length; ++row) {
             for (int col = 0; col < board[row].length; ++col) {
                 if (root.children.containsKey(board[row][col])) {
@@ -46,7 +65,6 @@ class TrieImplementation {
                 }
             }
         }
-
         return this._result;
     }
 

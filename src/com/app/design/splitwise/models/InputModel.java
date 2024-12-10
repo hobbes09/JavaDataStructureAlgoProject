@@ -11,4 +11,6 @@ public class InputModel {
     public User payer;
     public ArrayList<User> borrowers;
     public SplittingStrategies splittingStrategyName;
+
+    Group group;
 }
