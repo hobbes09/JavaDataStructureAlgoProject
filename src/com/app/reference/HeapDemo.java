@@ -47,6 +47,7 @@ public class HeapDemo implements Solution {
         System.out.println("Min Heap Content");
         int i = 0;
         while (i++ < SIZE) {
+            System.out.println(minHeap.peek());
             System.out.println(minHeap.poll());
         }
 
