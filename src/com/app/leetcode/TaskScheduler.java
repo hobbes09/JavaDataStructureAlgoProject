@@ -2,6 +2,7 @@ package com.app.leetcode;
 
 import com.app.Solution;
 
+// https://leetcode.com/problems/task-scheduler/description/
 public class TaskScheduler implements Solution {
     @Override
     public void execute() {
