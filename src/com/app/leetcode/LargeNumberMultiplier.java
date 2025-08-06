@@ -1,4 +1,4 @@
-package com.app;
+package com.app.leetcode;
 
 /*
 
@@ -17,7 +17,9 @@ Output : 41549622603955309777243716069997997007620439937711509062916
 
  */
 
-public class CourseHeroApp implements Solution {
+import com.app.Solution;
+
+public class LargeNumberMultiplier implements Solution {
 
     public String largeMultiplier(String num1, String num2) {
 
