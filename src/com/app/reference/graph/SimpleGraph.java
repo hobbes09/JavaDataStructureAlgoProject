@@ -1,19 +1,17 @@
 package com.app.reference.graph;
 
-import java.util.Deque;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class SimpleGraph {
 
     int totalNodes;
-    LinkedList<Integer> adjList[];
+    List<List<Integer>> adjList;
 
     public SimpleGraph(int totalNodes) {
         this.totalNodes = totalNodes;
-        this.adjList = new LinkedList[totalNodes];
+        this.adjList = new ArrayList<>();
         for (int i=0; i<totalNodes; i++) {
-            this.adjList[i] = new LinkedList<>();
+            this.adjList.add(new ArrayList<>());
         }
     }
 
@@ -22,7 +20,7 @@ public class SimpleGraph {
             throw new Exception("Invalid Input");
         }
 
-        LinkedList<Integer> nodeAdj = adjList[from];
+        List<Integer> nodeAdj = adjList.get(from);
         if (!nodeAdj.contains(to)) {
             nodeAdj.add(to);
         }
@@ -49,7 +47,7 @@ public class SimpleGraph {
                 System.out.print(node + " --> ");
 
                 // add nodes to queue
-                Iterator<Integer> iterator = this.adjList[node].iterator();
+                Iterator<Integer> iterator = this.adjList.get(node).iterator();
                 while (iterator.hasNext()) {
                     Integer t = iterator.next();
                     if (!visited[t]) {
@@ -77,7 +75,7 @@ public class SimpleGraph {
         visited[s] = true;
         System.out.print(s + " --> ");
 
-        Iterator<Integer> iterator = adjList[s].iterator();
+        Iterator<Integer> iterator = adjList.get(s).iterator();
         while (iterator.hasNext()) {
             Integer t = iterator.next();
             if (!visited[t]) {

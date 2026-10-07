@@ -4,6 +4,8 @@ import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
+// https://leetcode.com/problems/lru-cache/solutions/7049088/map-key-node-queue-implemented-as-dllist-node-node-key-val-prev-next
+
 public class LRUCache {
 
     class DLinkedNode {
